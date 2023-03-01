@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8">
+    <title>Sản phẩm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap styles -->
+    <link th:href="@{/assets/user/css/bootstrap.css}" rel="stylesheet"/>
+    <!-- Customize styles -->
+
+    <link th:href="@{/assets/user/style.css}" rel="stylesheet"/>
+    <!-- font awesome styles -->
+
+    <link th:href="@{/assets/user/font-awesome/css/font-awesome.css}" rel="stylesheet"/>
+
+
+    <!-- Favicons -->
+
+    <link th:href="@{/assets/user/ico/favicon.ico}" rel="shortcut icon"/>
+    <link
+            href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+            rel="stylesheet">
+    <link
+            href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+            rel="stylesheet">
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="path/to/font-awesome/css/font-awesome.min.css">
+    <style>
+        .text {
+            width: 100%;
+            max-width: 20rem;
+            padding: 1px;
+            margin: 2rem auto;
+            text-align: center;
+            background: white;
+            box-shadow: 0 2px 8px rgb(184, 172, 172);
+        }
+        .text p {
+            color: blueviolet;
+            padding: 25px 25px;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+<body>
+
+<!--
+	Upper Header Section
+-->
+
+<div th:replace="layouts/tagbar :: tagbar"></div>
+
+<!--
+Lower Header Section
+-->
+<div class="container">
+    <div id="gototop"></div>
+
+    <header th:replace="layouts/header :: header"></header>
+
+    <!--
+    Navigation Bar Section
+    -->
+    <div th:replace="layouts/header :: header_div"></div>
+                    <!-- Body Section  -->
+
+    <div class="text">
+        <p>Nhiệt độ hiện tại : [[${thongso.temperature}]] ℃</p>
+    </div>
+
+         <!--
+        Clients
+        -->
+        <section th:replace="layouts/footer :: footer_sec"></section>
+        <section th:replace="layouts/footer :: footer_foo"></section>
+
+    </div><!-- /container -->
+
+    <div th:replace="layouts/footer :: footer_link"></div>
+
+    <div th:replace="layouts/footer :: script"></div>
+
+</body>
+</html>
